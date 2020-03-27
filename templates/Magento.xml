@@ -1,0 +1,71 @@
+<templateSet group="Magento">
+  <template name="magentoModuleXml" value="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:Module/etc/module.xsd&quot;&gt;&#10;    &lt;module name=&quot;$name$&quot;/&gt;&#10;&lt;/config&gt;&#10;$END$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="magentoDiXml" value="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:ObjectManager/etc/config.xsd&quot;&gt;&#10;    $name$&#10;&lt;/config&gt;&#10;$END$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="magentoConfigClassPreferenceXml" value="&lt;preference for=&quot;\$for$&quot; type=&quot;\$type$&quot;/&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="for" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="magentoConfigPluginXml" value="&lt;type name=&quot;$typeName$&quot;&gt;&#10;    &lt;plugin name=&quot;$pluginName$&quot; type=&quot;$pluginClass$&quot;/&gt;&#10;&lt;/type&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="typeName" expression="" defaultValue="\Class\To\Plugin" alwaysStopAt="true" />
+    <variable name="pluginName" expression="" defaultValue="mynamespace_mymodule_pluginName" alwaysStopAt="true" />
+    <variable name="pluginClass" expression="" defaultValue="\MyNamespace\MyModule\Plugin\Name" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="magentoRoutesXml" value="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:App/etc/routes.xsd&quot;&gt;&#10;    &lt;router id=&quot;standard&quot;&gt;&#10;        &lt;route id=&quot;$id$&quot; frontName=&quot;$frontName$&quot;&gt;&#10;            &lt;module name=&quot;$moduleName$&quot;/&gt;&#10;        &lt;/route&gt;&#10;    &lt;/router&gt;&#10;&lt;/config&gt;&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="frontName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="moduleName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="magentoLayoutViewModelXml" value="&lt;arguments&gt;&#10;    &lt;argument name=&quot;viewModel&quot; xsi:type=&quot;object&quot;&gt;$class$&lt;/argument&gt;&#10;&lt;/arguments&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="magentoEventXml" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:Event/etc/events.xsd&quot;&gt;&#10;    &lt;event name=&quot;$eventName$&quot;&gt;&#10;        &lt;observer name=&quot;$observerName$&quot; instance=&quot;$className$&quot; /&gt;&#10;    &lt;/event&gt;&#10;&lt;/config&gt;&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="eventName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="observerName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="magentoLayoutXml" value="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;page xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:View/Layout/etc/page_configuration.xsd&quot;&gt;&#10;    &lt;body&gt;&#10;        &lt;referenceContainer name=&quot;content&quot;&gt;&#10;            &lt;block name=&quot;$blockName$&quot; template=&quot;$blockTemplate$&quot;/&gt;&#10;        &lt;/referenceContainer&gt;&#10;    &lt;/body&gt;&#10;&lt;/page&gt;&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="blockName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="blockTemplate" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="magentoLayoutsXml" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;page_layouts xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:View/PageLayout/etc/layouts.xsd&quot;&gt;&#10;    &lt;layout id=&quot;$layoutId$&quot;&gt;&#10;        &lt;label translate=&quot;true&quot;&gt;$layoutName$&lt;/label&gt;&#10;    &lt;/layout&gt;&#10;&lt;/page_layouts&gt;&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="layoutId" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="layoutName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="magentoRegistrationPhp" value="use Magento\Framework\Component\ComponentRegistrar;&#10;&#10;ComponentRegistrar::register(&#10;    ComponentRegistrar::MODULE,&#10;    '$name$',&#10;    __DIR__&#10;);&#10;$END$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>
