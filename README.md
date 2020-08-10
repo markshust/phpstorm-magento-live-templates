@@ -26,11 +26,11 @@
 git clone git@github.com:markshust/phpstorm-magento-live-templates.git ~/Sites/phpstorm-magento-live-templates
 
 # setup a symlink to the template within the templates directory
-# ln -s ~/Sites/phpstorm-magento-live-templates ~/Library/Application\ Support/JetBrains/<product><version>/templates/Magento.xml
+# ln -s ~/Sites/phpstorm-magento-live-templates/templates/Magento.xml ~/Library/Application\ Support/JetBrains/<product><version>/templates/Magento.xml
 
 # for example, PHPStorm 2020.2:
 mkdir ~/Library/Application\ Support/JetBrains/PhpStorm2020.2/templates/
-ln -s ~/Sites/phpstorm-magento-live-templates ~/Library/Application\ Support/JetBrains/PhpStorm2020.2/templates/Magento.xml
+ln -s ~/Sites/phpstorm-magento-live-templates/templates/Magento.xml ~/Library/Application\ Support/JetBrains/PhpStorm2020.2/templates/Magento.xml
 ```
 
 > After restarting PHPStorm, the live templates should then show up at Preferences > Editor > Live Templates > Magento.
