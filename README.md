@@ -19,11 +19,18 @@
 
 > Instead, you will need to install this collection of templates manually. You can do this by getting your configuration directory from [https://www.jetbrains.com/help/idea/tuning-the-ide.html](https://www.jetbrains.com/help/idea/tuning-the-ide.html?_ga=2.20256752.917962769.1596218809-1712783055.1595617792#config-directory), then symlinking the Magento.xml template into it's template directory.
 
-> For example on a Mac you would execute:
+> For example on a Mac you would:
 
 ```
+# clone out the repo
 git clone git@github.com:markshust/phpstorm-magento-live-templates.git ~/Sites/phpstorm-magento-live-templates
-ln -s ~/Sites/phpstorm-magento-live-templates ~/Library/Application Support/JetBrains/<product><version>/templates/Magento.xml
+
+# setup a symlink to the template within the templates directory
+# ln -s ~/Sites/phpstorm-magento-live-templates ~/Library/Application\ Support/JetBrains/<product><version>/templates/Magento.xml
+
+# for example, PHPStorm 2020.2:
+mkdir ~/Library/Application\ Support/JetBrains/PhpStorm2020.2/templates/
+ln -s ~/Sites/phpstorm-magento-live-templates ~/Library/Application\ Support/JetBrains/PhpStorm2020.2/templates/Magento.xml
 ```
 
 > After restarting PHPStorm, the live templates should then show up at Preferences > Editor > Live Templates > Magento.
