@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 N/A
 
+## [1.1.0] - 2020-09-04
+
+### Added
+- Added `magentoCspXml` for csp_whitelist.xml.
+
 ## [1.0.0] - 2020-03-27
 
 ### Added

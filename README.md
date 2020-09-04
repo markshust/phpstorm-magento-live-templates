@@ -42,6 +42,7 @@ With a file open, start typing the live template abbreviation. If a lot of other
 
 - `magentoConfigClassPreferenceXml`: template for class preference within config XML
 - `magentoConfigPluginXml`: template for plugin within config XML
+- `magentoCspXml`: template for csp_whitelist.xml
 - `magentoDiXml`: template for di.xml
 - `magentoEventXml`: template for event.xml
 - `magentoLayoutsXml`: template for layouts.xml
