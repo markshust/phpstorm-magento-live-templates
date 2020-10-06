@@ -55,6 +55,7 @@ With a file open, start typing the live template abbreviation. If a lot of other
 - `magentoLayoutsXml`: template for layouts.xml
 - `magentoLayoutViewModelXml`: template for view model within layout XML
 - `magentoLayoutXml`: template for layout.xml
+- `magentoMenuXml`: template for menu.xml
 - `magentoModuleXml`: template for module.xml
 - `magentoRegistrationPhp`: template for registration.php
 - `magentoRoutesXml`: template for routes.xml

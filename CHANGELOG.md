@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 N/A
 
+## [1.2.0] - 2020-10-06
+
+### Added
+- Added `magentoMenuXml` for menu.xml.
+
 ## [1.1.0] - 2020-09-04
 
 ### Added
