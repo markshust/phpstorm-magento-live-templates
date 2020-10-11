@@ -11,7 +11,7 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="magentoConfigClassPreferenceXml" value="&lt;preference for=&quot;\$for$&quot; type=&quot;\$type$&quot;/&gt;" description="" toReformat="false" toShortenFQNames="true">
+  <template name="magentoConfigClassPreferenceXml" value="&lt;preference for=&quot;\$for$&quot; type=&quot;\$type$&quot;/&gt;$END$" description="" toReformat="false" toShortenFQNames="true">
     <variable name="for" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -76,7 +76,7 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="magentoMenuXml" value="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:module:Magento_Backend:etc/menu.xsd&quot;&gt;&#10;    &lt;menu&gt;&#10;      &lt;add&#10;          id=&quot;$vendorModule$::$routeId$&quot;&#10;          title=&quot;$title$&quot;&#10;          translate=&quot;title&quot;&#10;          module=&quot;$vendorModule$&quot;&#10;          parent=&quot;Magento_Backend::content&quot;&#10;          sortOrder=&quot;$sortOrder$&quot;&#10;          dependsOnModule=&quot;$vendorModule$&quot;&#10;          resource=&quot;$vendorModule$::$routeId$&quot;&#10;      /&gt;&#10;      &lt;add&#10;          id=&quot;$vendorModule$::$routeId$_$secondaryRoute$&quot;&#10;          title=&quot;$secondaryTitle$&quot;&#10;          translate=&quot;title&quot;&#10;          module=&quot;$vendorModule$&quot;&#10;          parent=&quot;$vendorModule$::$routeId$&quot;&#10;          sortOrder=&quot;$secondarySortOrder$&quot;&#10;          dependsOnModule=&quot;$vendorModule$&quot;&#10;          action=&quot;$routeId$/$secondaryRoute$&quot;&#10;          resource=&quot;$vendorModule$::$routeId$&quot;&#10;      /&gt;&#10;    &lt;/menu&gt;&#10;&lt;/config&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
+  <template name="magentoMenuXml" value="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:module:Magento_Backend:etc/menu.xsd&quot;&gt;&#10;    &lt;menu&gt;&#10;      &lt;add&#10;          id=&quot;$vendorModule$::$routeId$&quot;&#10;          title=&quot;$title$&quot;&#10;          translate=&quot;title&quot;&#10;          module=&quot;$vendorModule$&quot;&#10;          parent=&quot;Magento_Backend::content&quot;&#10;          sortOrder=&quot;$sortOrder$&quot;&#10;          dependsOnModule=&quot;$vendorModule$&quot;&#10;          resource=&quot;$vendorModule$::$routeId$&quot;&#10;      /&gt;&#10;      &lt;add&#10;          id=&quot;$vendorModule$::$routeId$_$secondaryRoute$&quot;&#10;          title=&quot;$secondaryTitle$&quot;&#10;          translate=&quot;title&quot;&#10;          module=&quot;$vendorModule$&quot;&#10;          parent=&quot;$vendorModule$::$routeId$&quot;&#10;          sortOrder=&quot;$secondarySortOrder$&quot;&#10;          dependsOnModule=&quot;$vendorModule$&quot;&#10;          action=&quot;$routeId$/$secondaryRoute$&quot;&#10;          resource=&quot;$vendorModule$::$routeId$&quot;&#10;      /&gt;&#10;    &lt;/menu&gt;&#10;&lt;/config&gt;&#10;$END$" description="" toReformat="false" toShortenFQNames="true">
     <variable name="vendorModule" expression="" defaultValue="&quot;Foo_Bar&quot;" alwaysStopAt="true" />
     <variable name="routeId" expression="" defaultValue="&quot;myroute&quot;" alwaysStopAt="true" />
     <variable name="title" expression="" defaultValue="&quot;Main Title&quot;" alwaysStopAt="true" />
@@ -84,6 +84,24 @@
     <variable name="secondaryRoute" expression="" defaultValue="&quot;secondary&quot;" alwaysStopAt="true" />
     <variable name="secondaryTitle" expression="" defaultValue="&quot;Secondary Title&quot;" alwaysStopAt="true" />
     <variable name="secondarySortOrder" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="magentoModelPhp" value="&#10;#if (${NAMESPACE})&#10;namespace ${NAMESPACE};&#10;#end&#10;&#10;use Magento\Framework\ModelAbstractModel;&#10;use $fqcn$;&#10;&#10;class $className$ extends AbstractModel&#10;{&#10;    /**&#10;     * Initialize resource model.&#10;     *&#10;     * @return void&#10;     */&#10;    protected function _construct()&#10;    {&#10;        $this-&gt;_init();&#10;    }&#10;}&#10;$END$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="fqcn" expression="phpQualifiedClassName()" defaultValue="" alwaysStopAt="false" />
+    <variable name="className" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="magentoAclXml" value="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;config xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;urn:magento:framework:Acl/etc/acl.xsd&quot;&gt;&#10;   &lt;acl&gt;&#10;     &lt;resources&gt;&#10;        &lt;resource id=&quot;Magento_Backend::admin&quot;&gt;&#10;           &lt;resource id=&quot;$vendorModule$::menu&quot; title=&quot;$menuTitle$&quot; sortOrder=&quot;$menuSortOrder$&quot; &gt;&#10;              &lt;resource id=&quot;$vendorModule$::$submenuId$&quot; title=&quot;$submenuTitle$&quot; sortOrder=&quot;$submenuSortOrder$&quot; /&gt;&#10;           &lt;/resource&gt;&#10;        &lt;/resource&gt;&#10;     &lt;/resources&gt;&#10;   &lt;/acl&gt;&#10;&lt;/config&gt;&#10;$END$" toReformat="false" toShortenFQNames="true">
+    <variable name="vendorModule" expression="" defaultValue="&quot;Vendor_Module&quot;" alwaysStopAt="true" />
+    <variable name="menuTitle" expression="" defaultValue="&quot;Main Title&quot;" alwaysStopAt="true" />
+    <variable name="menuSortOrder" expression="" defaultValue="&quot;10&quot;" alwaysStopAt="true" />
+    <variable name="submenuId" expression="" defaultValue="&quot;create&quot;" alwaysStopAt="true" />
+    <variable name="submenuTitle" expression="" defaultValue="&quot;Create&quot;" alwaysStopAt="true" />
+    <variable name="submenuSortOrder" expression="" defaultValue="&quot;10&quot;" alwaysStopAt="true" />
     <context>
       <option name="XML" value="true" />
     </context>

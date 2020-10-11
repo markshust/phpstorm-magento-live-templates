@@ -47,6 +47,7 @@ With a file open, start typing the live template abbreviation. If a lot of other
 
 ### Available live templates
 
+- `magentoAclXml`: template for acl.xml
 - `magentoConfigClassPreferenceXml`: template for class preference within config XML
 - `magentoConfigPluginXml`: template for plugin within config XML
 - `magentoCspXml`: template for csp_whitelist.xml
