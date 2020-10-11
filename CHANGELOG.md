@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 N/A
 
+## [1.3.2] - 2020-10-11
+
+### Removed
+- Removed parent from being added to submenu id (unneeded) in `magentoMenuXml` template.
+
 ## [1.3.1] - 2020-10-11
 
 ### Updated
