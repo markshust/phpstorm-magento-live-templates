@@ -8,6 +8,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 N/A
 
+## [1.4.0] - 2021-01-28
+
+### Added
+- Added `declare(strict_types=1);` to PHP templates.
+- Added `translate="title"` to XML templates where appropriate.
+
+### Updated
+- Fixed inconsistent indentation with some XML templates.
+
 ## [1.3.2] - 2020-10-11
 
 ### Removed
