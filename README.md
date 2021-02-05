@@ -1,7 +1,19 @@
+
+<h1 align="center" style="color: red;">ABANDONED!</h1>
+
+<h1 align="center">THIS PROJECT IS NO LONGER MAINTAINED</h1>
+
+<div align="center">
+You are free to continue using these live templates, but this project is abandoned and no longer maintained.
+</div>
+
+---
+
 <h1 align="center">markshust/phpstorm-magento-live-templates</h1>
 
 <div align="center">
   <p>PHPStorm Live Templates for Magento 2</p>
+  <a href="https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity" target="_blank"><img src="https://img.shields.io/badge/maintained%3F-no-red.svg?style=flat-square" alt="Maintained - No" /></a>
   <a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/license-MIT-blue.svg" /></a>
 </div>
 
@@ -60,6 +72,7 @@ With a file open, start typing the live template abbreviation. If a lot of other
 - `magentoModuleXml`: template for module.xml
 - `magentoRegistrationPhp`: template for registration.php
 - `magentoRoutesXml`: template for routes.xml
+- `magentoWebapiXml`: template for webapi.xml
 
 ## Contributing
 
